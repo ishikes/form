@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment Form</title>
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0ecec;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: normal;
+            margin-bottom: 2px;
+            margin-top: 12px;
+            color: #333;
+        }
+        
+        input[type="text"],
+        textarea,
+        select,
+        input[type="number"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        select {
+            height: 36px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+            
+            input[type="submit"] {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment Form</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <p>Required field are marked with *</p>
+        <fieldset>
+            <legend>MCQ: *</legend>
+            <label>
+                <input type="radio" name="mcq" value="option1" required>
+                Option 1
+            </label><br>
+            <label>
+                <input type="radio" name="mcq" value="option2">
+                Option 2
+            </label><br>
+            <label>
+                <input type="radio" name="mcq" value="option3">
+                Option 3
+            </label><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Checkbox: *</legend>
+           
+            <label>
+                <input type="checkbox" name="checkbox[]" value="option1" >
+                Option 1
+            </label><br>
+            <label>
+                <input type="checkbox" name="checkbox[]" value="option2" >
+                Option 2
+            </label><br>
+            <label>
+                <input type="checkbox" name="checkbox[]" value="option3" >
+                Option 3
+            </label><br>
+       
+        </fieldset>
+        <br>
+        <label for="shortanswer">Short Answer: *</label><br>
+        <textarea id="shortanswer" name="shortanswer" rows="4" cols="50" placeholder="Write an Answer" required></textarea>
+        <br>
+        <label for="paragraph">Paragraph: *</label><br>
+        <textarea id="paragraph" name="paragraph" rows="6" cols="50" required placeholder="Type Something Here"></textarea>
+        <br>
+        <label for="dropdown">Drop down: * </label><br>
+        <select id="dropdown" name="dropdown" required>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <br>
+        <label for="linearScale">Linear Scale: *</label><br>
+        <input type="number" id="linearScale" name="linearScale" min="1" max="5" required>
+        <br>
+        <label for="choiceGridSingle">Multi Choice Grid: *</label><br>
+        <table>
+            <tr>
+                <th></th>
+                <th>Option 1</th>
+                <th>Option 2</th>
+                <th>Option 3</th>
+            </tr>
+            <tr>
+                <td>Row 1 </td>
+                <td><input type="radio" name="choiceSingleRow1" value="option1" required></td>
+                <td><input type="radio" name="choiceSingleRow1" value="option2"></td>
+                <td><input type="radio" name="choiceSingleRow1" value="option3"></td>
+            </tr>
+            <tr>
+                <td>Row 2 </td>
+                <td><input type="radio" name="choiceSingleRow2" value="option1" required></td>
+                <td><input type="radio" name="choiceSingleRow2" value="option2"></td>
+                <td><input type="radio" name="choiceSingleRow2" value="option3"></td>
+            </tr>
+            <tr>
+                <td>Row 3 </td>
+                <td><input type="radio" name="choiceSingleRow3" value="option1" required></td>
+                <td><input type="radio" name="choiceSingleRow3" value="option2"></td>
+                <td><input type="radio" name="choiceSingleRow3" value="option3"></td>
+            </tr>
+        </table>
+        <br>
+        <label for="choiceGridMultiple">Tick Box Grid (select all that apply): *</label><br>
+        <table>
+            <tr>
+                <th></th>
+                <th>Option 1 </th>
+                <th>Option 2 </th>
+                <th>Option 3 </th>
+            </tr>
+            <tr>
+                <td>Row 1</td>
+                <td><input type="checkbox" name="choiceMultipleRow1[]" value="option1" required></td>
+                <td><input type="checkbox" name="choiceMultipleRow1[]" value="option2" required></td>
+                <td><input type="checkbox" name="choiceMultipleRow1[]" value="option3" required></td>
+            </tr>
+            <tr>
+                <td>Row 2</td>
+                <td><input type="checkbox" name="choiceMultipleRow2[]" value="option1" required></td>
+                <td><input type="checkbox" name="choiceMultipleRow2[]" value="option2" required></td>
+                <td><input type="checkbox" name="choiceMultipleRow2[]" value="option3" required></td>
+            </tr>
+            <tr>
+                <td>Row 3</td>
+                <td><input type="checkbox" name="choiceMultipleRow3[]" value="option1" required></td>
+                <td><input type="checkbox" name="choiceMultipleRow3[]" value="option2" required></td>
+                <td><input type="checkbox" name="choiceMultipleRow3[]" value="option3" required></td>
+            </tr>
+        </table>
+        <br>
+        <label for="upload">Upload File: *</label><br>
+        <input type="file" id="upload" name="upload" accept=".pdf, .doc, .docx" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
